@@ -17,12 +17,16 @@ function reply(reply_token) {
     let headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {9qyQGZVscJyaG/EbtENRfaSvXRBP4lJ+4Q7YAFv7pS1Wx7sOtzi+LDUJdax0aD84NeuWrZ7HOEaLu8pj6w1JoD1K419iEApXx8YgJa2iHYb1PPTWyLWE4CBKYBfdb78zr+Oh3VBrG1RJgdJOWi5AnQdB04t89/1O/w1cDnyilFU=}'
-    }
-      let body = JSON.stringify({
+     }
+    let body = JSON.stringify({
         replyToken: reply_token,
         messages: [{
             type: 'text',
-            text: msg
+            text: 'Hello'
+        },
+        {
+            type: 'text',
+            text: 'How are you?'
         }]
     })
     request.post({
